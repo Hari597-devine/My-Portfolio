@@ -1,115 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My portfolio</title>
-  <meta name="description" content="Portfolio of Hari Shankar Mahato.">
-  <meta name="robots" content="index, follow">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <!-- Relying entirely on browser-default layouts per criteria -->
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | Hari Shankar Mahato</title>
+    <meta name="description" content="Portfolio of Hari Shankar Mahato.">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Hari Shankar Mahato</h1>
-        <img src="images/logo.png" alt="Logo" width="70">
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#about-me">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <hr>
+        <div class="container header-container">
+            <div class="logo-area">
+                <img src="images/logo.png" alt="Logo" class="logo-img" width="70">
+                <h1 class="logo-text">Hari Shankar Mahato</h1>
+            </div>
+            
+            <!-- Modern Search Bar -->
+            <div class="search-container">
+                <input type="search" placeholder="Search projects or skills..." id="search-bar" aria-label="Search">
+            </div>
+
+            <nav aria-label="Primary Navigation">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about-me">About Me</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
+    <main class="container">
+        <!-- ABOUT ME -->
         <section id="about-me">
-            <h2>About Me</h2>
-            <p>
-                <strong>I am an ambitious, growth-driven IT professional currently pursuing my Bachelor of Information Technology (BIT) at the Model Institute 
-                    of Technology, in partnership with International American University.</strong><br>
-
-
-                    <i>I operate at a unique intersection of technical system architecture and digital media production. My experience includes serving as an academic 
-                    video editor for MiDas Education for eight months, where I took full ownership of the end-to-end post-production pipeline to deliver over 50 
-                    educational learning modules. This creative background has given me sharp design instincts and strong multimedia problem-solving skills using 
-                    industry-standard tools like Premiere Pro and DaVinci Resolve.Alongside my digital media background, I am deeply committed to establishing a 
-                    rigorous technical foundation in modern network environments and systems security. I have actively advanced through AWS Academy and Cisco 
-                    Academy coursework, earning credentials in Cloud Foundations, Cloud Security, and basic network infrastructure. Driven by a hands-on approach 
-                    to tech, I lean heavily into exploring system administration, ethical hacking, and secure application deployments.Beyond my technical and 
-                    creative skillsets, I possess proven organizational and leadership capabilities. Notably, I managed the high-traffic logistics for major 
-                    networking events on campus, demonstrating an ability to coordinate resources, lead teams under pressure, and drive operational efficiency. I am
-                    constantly looking for new avenues to learn, innovate, and deploy optimized, highly secure digital solutions. </i>
-
-                    <br> 
-
-            <img src="images/profilepicture.png" alt="Profile picture" width="160">
+            <div class="section-heading-wrapper">
+                <h2>About Me</h2>
+                <div class="header-line"></div>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="lead">
+                        I am an ambitious, growth-driven IT professional currently pursuing my Bachelor of Information Technology (BIT) at the Model Institute of Technology, in partnership with International American University.
+                    </p>
+                    <p class="bio">
+                        I operate at a unique intersection of technical system architecture and digital media production. My experience includes serving as an academic video editor for MiDas Education for eight months, where I took full ownership of the end-to-end post-production pipeline to deliver over 50 educational learning modules. This creative background has given me sharp design instincts and strong multimedia problem-solving skills using industry-standard tools like Premiere Pro and DaVinci Resolve.
+                    </p>
+                    <p class="bio">
+                        Alongside my digital media background, I am deeply committed to establishing a rigorous technical foundation in modern network environments and systems security. I have actively advanced through AWS Academy and Cisco Academy coursework, earning credentials in Cloud Foundations, Cloud Security, and basic network infrastructure. Driven by a hands-on approach to tech, I lean heavily into exploring system administration, ethical hacking, and secure application deployments.
+                    </p>
+                </div>
+                <div class="about-img-container">
+                    <div class="about-img-wrapper">
+                        <img src="images/profilepicture.png" alt="Profile picture" class="profile-img">
+                    </div>
+                </div>
+            </div>
         </section>
 
+        <!-- SKILLS -->
         <section id="skills">
-            <h2>Skills</h2>
-            <dl>
-                <dt><strong>Creative Media Production</strong></dt>
-                <dd><em>Premiere Pro, Canva, DaVinci Resolve, CapCut</em></dd>
-            </dl>
-            <dl>
-                <dt><strong>Webpage Design and Development</strong></dt>
-                <dd><em>HTML, CSS, JAVA, SQL</em></dd>
-            </dl>
-            <dl>
-                <dt><strong>Cloud & Security Architecture</strong></dt>
-                <dd><em>AWS Cloud, Cybersecurity, Ethical Hacking, Network Protocols, Pentesting</em></dd>
-            </dl>
+            <div class="section-heading-wrapper">
+                <h2>My Skills</h2>
+                <div class="header-line"></div>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3>Creative Media Production</h3>
+                    <p>Premiere Pro, Canva, DaVinci Resolve, CapCut</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">💻</div>
+                    <h3>Web Design & Dev</h3>
+                    <p>HTML, CSS, Java, SQL, C++</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🛡️</div>
+                    <h3>Cloud & Security</h3>
+                    <p>AWS Cloud, Cybersecurity, Ethical Hacking, Network Protocols, Pentesting, Linux SysAdmin</p>
+                </div>
+            </div>
         </section>
 
+        <!-- PROJECTS -->
         <section id="projects">
-            <h2>My Projects</h2>
+            <div class="section-heading-wrapper">
+                <h2>Featured Projects</h2>
+                <div class="header-line"></div>
+            </div>
+            
+            <div class="project-grid">
+                <article class="project-card">
+                    <div class="project-content">
+                        <h3>Video Production (MiDas eCLASS Video Pipeline)</h3>
+                        <p>End-to-end production of 50+ educational video modules for e-learning. Multi-track audio sync, color grading, and quality assurance for corporate portals.</p>
+                    </div>
+                </article>
 
-            <article>
-                <h3>Video Production (MiDas eCLASS Video Pipeline)</h3>
-                <p>End-to-end production of 50+ educational video modules for e-learning. Multi-track audio sync, color grading, and quality assurance for corporate portals.</p>
-            </article>
+                <article class="project-card">
+                    <div class="project-content">
+                        <h3>Cloud & Security (AWS Cloud Architecture Lab)</h3>
+                        <p>Completed AWS Academy Cloud Foundations coursework covering EC2, S3, VPC networking, IAM policies, and cost optimization for deployments.</p>
+                    </div>
+                    <a href="https://www.credly.com/users/hari-shankar-mahato.834d431e/badges" target="_blank" rel="noopener noreferrer" class="btn">
+                        <span>View Certifications</span>
+                    </a>
+                </article>
 
-            <article>
-                <h3>Cloud & Security (AWS Cloud Architecture Lab)</h3>
-                <p>Completed AWS Academy Cloud Foundations coursework covering EC2, S3, VPC networking, IAM policies, and cost optimization for deployments.</p>
-                <p><a href="https://www.credly.com/users/hari-shankar-mahato.834d431e/badges" target="_blank">View Certifications</a></p>
-            </article>
-
-            <article>
-                <h3>Vehicle Renting Services</h3>
-                <p>I have created a Website that helps users to rent vehicles like Cars, Scooters, Bikes, and SUVs.</p>
-                <p><a href="https://github.com/Hari597-devine/ridesmart-nepal-hub" target="_blank">View Project Repository</a></p>
-            </article>
+                <article class="project-card">
+                    <div class="project-content">
+                        <h3>Vehicle Renting Services</h3>
+                        <p>I have created a Website that helps users to rent vehicles like Cars, Scooters, Bikes, and SUVs.</p>
+                    </div>
+                    <a href="https://github.com/Hari597-devine/ridesmart-nepal-hub" target="_blank" rel="noopener noreferrer" class="btn">
+                        <span>View Repository</span>
+                    </a>
+                </article>
+            </div>
         </section>
 
+        <!-- CONTACT -->
         <section id="contact">
-            <h2>Contact</h2>
-            <form>
-                <label for="full-name">Full Name</label><br>
-                <input type="text" id="full-name"><br><br>
+            <div class="section-heading-wrapper">
+                <h2>Contact Me</h2>
+                <div class="header-line"></div>
+            </div>
+            
+            <div class="contact-container">
+                <!-- Social Connections Block -->
+                <div class="social-contact-wrapper">
+                    <h3>Connect With Me</h3>
+                    <p>Feel free to reach out across any of my professional networks or digital channels.</p>
+                    
+                    <div class="social-icon-grid">
+                        <a href="https://github.com/Hari597-devine" target="_blank" rel="noopener noreferrer" class="social-item" title="GitHub">
+                            <img src="images/github.png" alt="GitHub Logo" class="social-icon-small" width="24" height="24">
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-item" title="LinkedIn">
+                            <img src="images/linkedin.png" alt="LinkedIn Logo" class="social-icon-small" width="24" height="24">
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-item" title="Instagram">
+                            <img src="images/instagram.png" alt="Instagram Logo" class="social-icon-small" width="24" height="24">
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-item" title="Facebook">
+                            <img src="images/facebook.png" alt="Facebook Logo" class="social-icon-small" width="24" height="24">
+                            <span>Facebook</span>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-item" title="Twitter / X">
+                            <img src="images/twitter.png" alt="Twitter Logo" class="social-icon-small" width="24" height="24">
+                            <span>Twitter</span>
+                        </a>
+                        <div class="social-item freelance-status">
+                            <img src="images/freelance-work.png" alt="Freelance availability icon" class="social-icon-small" width="24" height="24">
+                            <span class="freelance-tag">Available for Freelance</span>
+                        </div>
+                    </div>
+                </div>
 
-                <label for="email">Gmail</label><br>
-                <input type="email" id="email"><br><br>
+                <!-- Form Block -->
+                <div class="contact-card">
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="full-name">Full Name</label>
+                            <input type="text" id="full-name" name="name" placeholder="John Doe" required>
+                        </div>
 
-                <label for="contact-number">Contact Number</label><br>
-                <input type="tel" id="contact-number"><br><br>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+                        </div>
 
-                <label for="message">Message</label><br>
-                <textarea id="message"></textarea><br><br>
-                
-                <button type="submit">Submit</button>
-            </form>
+                        <div class="form-group">
+                            <label for="contact-number">Contact Number</label>
+                            <input type="tel" id="contact-number" name="phone" placeholder="+977 ...">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit">
+                            <span>Send Message</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
         </section>
     </main>
 
-    <hr>
     <footer>
-        <p>&copy; 2026 Hari Shankar Mahato. All Rights Reserved.</p>
+        <div class="container footer-content">
+            <p>&copy; 2026 Hari Shankar Mahato. All Rights Reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
